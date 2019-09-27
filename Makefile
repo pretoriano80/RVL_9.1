@@ -305,7 +305,7 @@ ifeq ($(strip $(clang)), true)
 CLANG_CROSS_COMPILE_PRE:=$(srctree)/../../prebuilts/clang/host/linux-x86/clang-4679922/bin/
 HOSTCC       = $(CLANG_CROSS_COMPILE_PRE)clang
 else
-HOSTCC       = gcc
+HOSTCC       = ccache gcc
 endif
 HOSTCXX      = g++
 HOSTCFLAGS   := -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89
